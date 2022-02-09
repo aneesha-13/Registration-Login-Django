@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"> {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous">
+</head>
+<body>
+    <form action="/register/login/" method="post">
+      {% csrf_token %}
+        <div class="container">
+          <h1>Login</h1>
+          <hr>
+          <label for="email"><b>E-mail</b></label>
+          <input type="text" placeholder="Enter E-mail" name="login_email" required>
+      
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="login_password" required>
+      
+          <button type="submit">Login</button>
+
+          <p class="text-center">Don't have an account? <a href="/register/home">Create an account</a>.</p>
+        </div>
+      
+      </form>
+      
+</body>
+</html>
